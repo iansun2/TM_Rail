@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ros_dev/workspace/tm_ws/build/tm_rail_interface/rosidl_generator_py/tm_rail_interface/tm_rail_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" "TARGETS" "tm_rail_interface__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/tm_rail_interface")

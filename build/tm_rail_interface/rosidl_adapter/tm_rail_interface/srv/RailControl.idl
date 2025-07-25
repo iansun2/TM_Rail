@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from tm_rail_interface/srv/RailControl.srv
+// generated code does not contain a copyright notice
+
+
+module tm_rail_interface {
+  module srv {
+    @verbatim (language="comment", text=
+      "call rail = 1" "\n"
+      "return bag = 2")
+    struct RailControl_Request {
+      int8 opt_code;
+
+      string rail_name;
+    };
+    struct RailControl_Response {
+      @verbatim (language="comment", text=
+        "success = 0" "\n"
+        "failed = 1")
+      int32 result;
+    };
+  };
+};

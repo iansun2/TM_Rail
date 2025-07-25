@@ -1,0 +1,17 @@
+[1.054s] Invoking command in '/home/ros_dev/workspace/tm_ws/build/tm_rail': PYTHONPATH=/home/ros_dev/workspace/tm_ws/build/tm_rail/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ros_dev/workspace/tm_ws/build/tm_rail/build --no-deps symlink_data
+[1.426s] running develop
+[1.639s] running egg_info
+[1.639s] writing tm_rail.egg-info/PKG-INFO
+[1.639s] writing dependency_links to tm_rail.egg-info/dependency_links.txt
+[1.639s] writing entry points to tm_rail.egg-info/entry_points.txt
+[1.639s] writing requirements to tm_rail.egg-info/requires.txt
+[1.639s] writing top-level names to tm_rail.egg-info/top_level.txt
+[1.643s] reading manifest file 'tm_rail.egg-info/SOURCES.txt'
+[1.644s] writing manifest file 'tm_rail.egg-info/SOURCES.txt'
+[1.647s] running build_ext
+[1.647s] Creating /home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages/tm-rail.egg-link (link to .)
+[1.649s] Installing rail_node script to /home/ros_dev/workspace/tm_ws/install/tm_rail/lib/tm_rail
+[1.649s] 
+[1.649s] Installed /home/ros_dev/workspace/tm_ws/build/tm_rail
+[1.649s] running symlink_data
+[1.715s] Invoked command in '/home/ros_dev/workspace/tm_ws/build/tm_rail' returned '0': PYTHONPATH=/home/ros_dev/workspace/tm_ws/build/tm_rail/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ros_dev/workspace/tm_ws/build/tm_rail/build --no-deps symlink_data

@@ -1,0 +1,3 @@
+[console_scripts]
+rail_node = tm_rail.rail_node:main
+

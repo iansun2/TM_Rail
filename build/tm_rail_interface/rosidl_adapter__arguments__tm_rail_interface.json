@@ -1,0 +1,7 @@
+{
+  "package_name": "tm_rail_interface",
+  "non_idl_tuples": [
+    "/home/ros_dev/workspace/tm_ws/src/tm_rail_interface:srv/RailControl.srv",
+    "/home/ros_dev/workspace/tm_ws/src/tm_rail_interface:msg/Status.msg"
+  ]
+}

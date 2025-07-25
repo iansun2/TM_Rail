@@ -1,0 +1,24 @@
+running develop
+running egg_info
+creating tm_rail.egg-info
+writing tm_rail.egg-info/PKG-INFO
+writing dependency_links to tm_rail.egg-info/dependency_links.txt
+writing entry points to tm_rail.egg-info/entry_points.txt
+writing requirements to tm_rail.egg-info/requires.txt
+writing top-level names to tm_rail.egg-info/top_level.txt
+writing manifest file 'tm_rail.egg-info/SOURCES.txt'
+reading manifest file 'tm_rail.egg-info/SOURCES.txt'
+writing manifest file 'tm_rail.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages/tm-rail.egg-link (link to .)
+Installing rail_node script to /home/ros_dev/workspace/tm_ws/install/tm_rail/lib/tm_rail
+
+Installed /home/ros_dev/workspace/tm_ws/build/tm_rail
+running symlink_data
+creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index
+creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index/resource_index
+creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index/resource_index/packages
+symbolically linking /home/ros_dev/workspace/tm_ws/build/tm_rail/resource/tm_rail -> /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index/resource_index/packages
+symbolically linking /home/ros_dev/workspace/tm_ws/build/tm_rail/package.xml -> /home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail
+creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/launch
+symbolically linking /home/ros_dev/workspace/tm_ws/build/tm_rail/launch/tm_rail_launch.py -> /home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/launch

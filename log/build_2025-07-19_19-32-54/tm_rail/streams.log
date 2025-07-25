@@ -1,0 +1,26 @@
+[1.244s] Invoking command in '/home/ros_dev/workspace/tm_ws/build/tm_rail': PYTHONPATH=/home/ros_dev/workspace/tm_ws/build/tm_rail/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ros_dev/workspace/tm_ws/build/tm_rail/build --no-deps symlink_data
+[1.645s] running develop
+[1.847s] running egg_info
+[1.847s] creating tm_rail.egg-info
+[1.848s] writing tm_rail.egg-info/PKG-INFO
+[1.848s] writing dependency_links to tm_rail.egg-info/dependency_links.txt
+[1.848s] writing entry points to tm_rail.egg-info/entry_points.txt
+[1.848s] writing requirements to tm_rail.egg-info/requires.txt
+[1.848s] writing top-level names to tm_rail.egg-info/top_level.txt
+[1.849s] writing manifest file 'tm_rail.egg-info/SOURCES.txt'
+[1.851s] reading manifest file 'tm_rail.egg-info/SOURCES.txt'
+[1.852s] writing manifest file 'tm_rail.egg-info/SOURCES.txt'
+[1.856s] running build_ext
+[1.857s] Creating /home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages/tm-rail.egg-link (link to .)
+[1.860s] Installing rail_node script to /home/ros_dev/workspace/tm_ws/install/tm_rail/lib/tm_rail
+[1.860s] 
+[1.861s] Installed /home/ros_dev/workspace/tm_ws/build/tm_rail
+[1.861s] running symlink_data
+[1.861s] creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index
+[1.862s] creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index/resource_index
+[1.862s] creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index/resource_index/packages
+[1.862s] symbolically linking /home/ros_dev/workspace/tm_ws/build/tm_rail/resource/tm_rail -> /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index/resource_index/packages
+[1.863s] symbolically linking /home/ros_dev/workspace/tm_ws/build/tm_rail/package.xml -> /home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail
+[1.863s] creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/launch
+[1.863s] symbolically linking /home/ros_dev/workspace/tm_ws/build/tm_rail/launch/tm_rail_launch.py -> /home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/launch
+[1.941s] Invoked command in '/home/ros_dev/workspace/tm_ws/build/tm_rail' returned '0': PYTHONPATH=/home/ros_dev/workspace/tm_ws/build/tm_rail/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ros_dev/workspace/tm_ws/build/tm_rail/build --no-deps symlink_data

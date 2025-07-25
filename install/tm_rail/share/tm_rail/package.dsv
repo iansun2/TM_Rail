@@ -1,0 +1,9 @@
+source;share/tm_rail/hook/pythonpath.ps1
+source;share/tm_rail/hook/pythonpath.dsv
+source;share/tm_rail/hook/pythonpath.sh
+source;share/tm_rail/hook/ament_prefix_path.ps1
+source;share/tm_rail/hook/ament_prefix_path.dsv
+source;share/tm_rail/hook/ament_prefix_path.sh
+source;../../build/tm_rail/share/tm_rail/hook/pythonpath_develop.ps1
+source;../../build/tm_rail/share/tm_rail/hook/pythonpath_develop.dsv
+source;../../build/tm_rail/share/tm_rail/hook/pythonpath_develop.sh

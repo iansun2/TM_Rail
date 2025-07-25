@@ -1,0 +1,204 @@
+[0.189s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.190s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=18, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7d31cf8cf400>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7d31cf8cee30>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7d31cf8cee30>>, mixin_verb=('build',))
+[0.388s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.388s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.388s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.388s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.388s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.389s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.389s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ros_dev/workspace/tm_ws'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail) by extensions ['ignore', 'ignore_ament_install']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail) by extension 'ignore'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail) by extension 'ignore_ament_install'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail) by extensions ['colcon_pkg']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail) by extension 'colcon_pkg'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail) by extensions ['colcon_meta']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail) by extension 'colcon_meta'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail) by extensions ['ros']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail) by extension 'ros'
+[0.430s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tm_rail' with type 'ros.ament_python' and name 'tm_rail'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail_interface) by extension 'ignore'
+[0.430s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail_interface) by extension 'ignore_ament_install'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail_interface) by extensions ['colcon_pkg']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail_interface) by extension 'colcon_pkg'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail_interface) by extensions ['colcon_meta']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail_interface) by extension 'colcon_meta'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail_interface) by extensions ['ros']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(src/tm_rail_interface) by extension 'ros'
+[0.432s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tm_rail_interface' with type 'ros.ament_cmake' and name 'tm_rail_interface'
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.432s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'tm_rail' build argument 'cmake_args' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'tm_rail' build argument 'cmake_target' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'tm_rail' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'tm_rail' build argument 'cmake_clean_cache' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'tm_rail' build argument 'cmake_clean_first' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'tm_rail' build argument 'cmake_force_configure' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'tm_rail' build argument 'ament_cmake_args' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'tm_rail' build argument 'catkin_cmake_args' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'tm_rail' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.460s] DEBUG:colcon.colcon_core.verb:Building package 'tm_rail' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ros_dev/workspace/tm_ws/build/tm_rail', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ros_dev/workspace/tm_ws/install/tm_rail', 'merge_install': False, 'path': '/home/ros_dev/workspace/tm_ws/src/tm_rail', 'symlink_install': True, 'test_result_base': None}
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'tm_rail_interface' build argument 'cmake_args' from command line to 'None'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'tm_rail_interface' build argument 'cmake_target' from command line to 'None'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'tm_rail_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'tm_rail_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'tm_rail_interface' build argument 'cmake_clean_first' from command line to 'False'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'tm_rail_interface' build argument 'cmake_force_configure' from command line to 'False'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'tm_rail_interface' build argument 'ament_cmake_args' from command line to 'None'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'tm_rail_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'tm_rail_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.461s] DEBUG:colcon.colcon_core.verb:Building package 'tm_rail_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface', 'merge_install': False, 'path': '/home/ros_dev/workspace/tm_ws/src/tm_rail_interface', 'symlink_install': True, 'test_result_base': None}
+[0.461s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.463s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.463s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ros_dev/workspace/tm_ws/src/tm_rail' with build type 'ament_python'
+[0.464s] Level 1:colcon.colcon_core.shell:create_environment_hook('tm_rail', 'ament_prefix_path')
+[0.467s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.468s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/hook/ament_prefix_path.ps1'
+[0.469s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/hook/ament_prefix_path.dsv'
+[0.469s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/hook/ament_prefix_path.sh'
+[0.470s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.470s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.472s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.472s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.477s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ros_dev/workspace/tm_ws/src/tm_rail_interface' with build type 'ament_cmake'
+[0.478s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ros_dev/workspace/tm_ws/src/tm_rail_interface'
+[0.478s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.478s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.083s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ros_dev/workspace/tm_ws/src/tm_rail'
+[1.084s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.084s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.100s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble /usr/bin/cmake /home/ros_dev/workspace/tm_ws/src/tm_rail_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros_dev/workspace/tm_ws/install/tm_rail_interface
+[1.709s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros_dev/workspace/tm_ws/build/tm_rail': PYTHONPATH=/home/ros_dev/workspace/tm_ws/build/tm_rail/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ros_dev/workspace/tm_ws/build/tm_rail/build --no-deps symlink_data
+[2.402s] Level 1:colcon.colcon_core.shell:create_environment_hook('tm_rail', 'pythonpath_develop')
+[2.404s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/build/tm_rail/share/tm_rail/hook/pythonpath_develop.ps1'
+[2.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros_dev/workspace/tm_ws/build/tm_rail' returned '0': PYTHONPATH=/home/ros_dev/workspace/tm_ws/build/tm_rail/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ros_dev/workspace/tm_ws/build/tm_rail/build --no-deps symlink_data
+[2.407s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros_dev/workspace/tm_ws/build/tm_rail/share/tm_rail/hook/pythonpath_develop.dsv'
+[2.408s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/build/tm_rail/share/tm_rail/hook/pythonpath_develop.sh'
+[2.419s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail' for CMake module files
+[2.421s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail' for CMake config files
+[2.423s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail/lib'
+[2.424s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail/bin'
+[2.424s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/pkgconfig/tm_rail.pc'
+[2.425s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages'
+[2.425s] Level 1:colcon.colcon_core.shell:create_environment_hook('tm_rail', 'pythonpath')
+[2.426s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/hook/pythonpath.ps1'
+[2.427s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/hook/pythonpath.dsv'
+[2.428s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/hook/pythonpath.sh'
+[2.430s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail/bin'
+[2.430s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tm_rail)
+[2.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/package.ps1'
+[2.435s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/package.dsv'
+[2.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/package.sh'
+[2.440s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/package.bash'
+[2.443s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/package.zsh'
+[2.445s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros_dev/workspace/tm_ws/install/tm_rail/share/colcon-core/packages/tm_rail)
+[4.099s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble /usr/bin/cmake /home/ros_dev/workspace/tm_ws/src/tm_rail_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ros_dev/workspace/tm_ws/install/tm_rail_interface
+[4.104s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble /usr/bin/cmake --build /home/ros_dev/workspace/tm_ws/build/tm_rail_interface -- -j18 -l18
+[7.941s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble /usr/bin/cmake --build /home/ros_dev/workspace/tm_ws/build/tm_rail_interface -- -j18 -l18
+[7.961s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble /usr/bin/cmake --install /home/ros_dev/workspace/tm_ws/build/tm_rail_interface
+[9.488s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tm_rail_interface)
+[9.489s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface' for CMake module files
+[9.491s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble /usr/bin/cmake --install /home/ros_dev/workspace/tm_ws/build/tm_rail_interface
+[9.492s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface' for CMake config files
+[9.493s] Level 1:colcon.colcon_core.shell:create_environment_hook('tm_rail_interface', 'cmake_prefix_path')
+[9.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/cmake_prefix_path.ps1'
+[9.494s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/cmake_prefix_path.dsv'
+[9.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/cmake_prefix_path.sh'
+[9.495s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib'
+[9.495s] Level 1:colcon.colcon_core.shell:create_environment_hook('tm_rail_interface', 'ld_library_path_lib')
+[9.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/ld_library_path_lib.ps1'
+[9.496s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/ld_library_path_lib.dsv'
+[9.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/ld_library_path_lib.sh'
+[9.498s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/bin'
+[9.498s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/pkgconfig/tm_rail_interface.pc'
+[9.498s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/python3.10/site-packages'
+[9.498s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/bin'
+[9.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.ps1'
+[9.500s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.dsv'
+[9.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.sh'
+[9.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.bash'
+[9.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.zsh'
+[9.502s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/colcon-core/packages/tm_rail_interface)
+[9.504s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tm_rail_interface)
+[9.505s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface' for CMake module files
+[9.508s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface' for CMake config files
+[9.509s] Level 1:colcon.colcon_core.shell:create_environment_hook('tm_rail_interface', 'cmake_prefix_path')
+[9.510s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/cmake_prefix_path.ps1'
+[9.511s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/cmake_prefix_path.dsv'
+[9.512s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/cmake_prefix_path.sh'
+[9.512s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib'
+[9.513s] Level 1:colcon.colcon_core.shell:create_environment_hook('tm_rail_interface', 'ld_library_path_lib')
+[9.513s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/ld_library_path_lib.ps1'
+[9.513s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/ld_library_path_lib.dsv'
+[9.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/hook/ld_library_path_lib.sh'
+[9.514s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/bin'
+[9.514s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/pkgconfig/tm_rail_interface.pc'
+[9.515s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/python3.10/site-packages'
+[9.515s] Level 1:colcon.colcon_core.environment:checking '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/bin'
+[9.515s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.ps1'
+[9.516s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.dsv'
+[9.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.sh'
+[9.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.bash'
+[9.518s] INFO:colcon.colcon_core.shell:Creating package script '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.zsh'
+[9.518s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/colcon-core/packages/tm_rail_interface)
+[9.519s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.519s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.519s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.519s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.540s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[9.540s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.541s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.541s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.546s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[9.546s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.548s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros_dev/workspace/tm_ws/install/local_setup.ps1'
+[9.549s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ros_dev/workspace/tm_ws/install/_local_setup_util_ps1.py'
+[9.552s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros_dev/workspace/tm_ws/install/setup.ps1'
+[9.554s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros_dev/workspace/tm_ws/install/local_setup.sh'
+[9.554s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ros_dev/workspace/tm_ws/install/_local_setup_util_sh.py'
+[9.555s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros_dev/workspace/tm_ws/install/setup.sh'
+[9.557s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros_dev/workspace/tm_ws/install/local_setup.bash'
+[9.557s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros_dev/workspace/tm_ws/install/setup.bash'
+[9.558s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ros_dev/workspace/tm_ws/install/local_setup.zsh'
+[9.559s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ros_dev/workspace/tm_ws/install/setup.zsh'

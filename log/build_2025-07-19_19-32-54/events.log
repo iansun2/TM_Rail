@@ -1,0 +1,359 @@
+[0.000000] (-) TimerEvent: {}
+[0.000509] (tm_rail) JobQueued: {'identifier': 'tm_rail', 'dependencies': OrderedDict()}
+[0.000601] (tm_rail_interface) JobQueued: {'identifier': 'tm_rail_interface', 'dependencies': OrderedDict()}
+[0.000657] (tm_rail) JobStarted: {'identifier': 'tm_rail'}
+[0.014470] (tm_rail_interface) JobStarted: {'identifier': 'tm_rail_interface'}
+[0.098624] (-) TimerEvent: {}
+[0.199372] (-) TimerEvent: {}
+[0.300042] (-) TimerEvent: {}
+[0.400800] (-) TimerEvent: {}
+[0.501563] (-) TimerEvent: {}
+[0.602375] (-) TimerEvent: {}
+[0.628713] (tm_rail_interface) JobProgress: {'identifier': 'tm_rail_interface', 'progress': 'cmake'}
+[0.630975] (tm_rail_interface) Command: {'cmd': ['/usr/bin/cmake', '/home/ros_dev/workspace/tm_ws/src/tm_rail_interface', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/ros_dev/workspace/tm_ws/install/tm_rail_interface'], 'cwd': '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface', 'env': OrderedDict([('HOSTNAME', 'Ian-Laptop'), ('GIT_ASKPASS', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/bin/helpers/browser.sh'), ('HOME', '/home/ros_dev'), ('OLDPWD', '/home/ros_dev/workspace/tm_ws/src'), ('TERM_PROGRAM_VERSION', '1.101.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-a99f132a-6d70-4a1e-8d08-140ae86b19ba.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/ros_dev/workspace/tm_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/bin/remote-cli:/home/ros_dev/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock","/home/ros_dev/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-f3762de39c.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock'), ('AMENT_PREFIX_PATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble'), ('SHELL', '/bin/sh'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface'), ('QT_QPA_PLATFORM', 'xcb'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages:/home/ros_dev/workspace/tm_ws/build/tm_rail:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble')]), 'shell': False}
+[0.702517] (-) TimerEvent: {}
+[0.747815] (tm_rail_interface) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.802660] (-) TimerEvent: {}
+[0.858096] (tm_rail_interface) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.875338] (tm_rail_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.902878] (-) TimerEvent: {}
+[1.003404] (-) TimerEvent: {}
+[1.029508] (tm_rail_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.039571] (tm_rail_interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.040018] (tm_rail_interface) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.040423] (tm_rail_interface) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.045477] (tm_rail_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.103578] (-) TimerEvent: {}
+[1.204541] (-) TimerEvent: {}
+[1.240182] (tm_rail) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ros_dev/workspace/tm_ws/build/tm_rail/build', '--no-deps', 'symlink_data'], 'cwd': '/home/ros_dev/workspace/tm_ws/build/tm_rail', 'env': {'HOSTNAME': 'Ian-Laptop', 'GIT_ASKPASS': '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/bin/helpers/browser.sh', 'HOME': '/home/ros_dev', 'OLDPWD': '/home/ros_dev/workspace/tm_ws/src', 'TERM_PROGRAM_VERSION': '1.101.2', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-a99f132a-6d70-4a1e-8d08-140ae86b19ba.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/home/ros_dev/workspace/tm_ws/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/humble/bin:/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/bin/remote-cli:/home/ros_dev/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/tmp', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock","/home/ros_dev/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'XAUTHORITY': '/tmp/.docker.xauth', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-f3762de39c.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock', 'AMENT_PREFIX_PATH': '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble', 'SHELL': '/bin/sh', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ros_dev/workspace/tm_ws/build/tm_rail', 'QT_QPA_PLATFORM': 'xcb', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/ros_dev/workspace/tm_ws/build/tm_rail/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages:/home/ros_dev/workspace/tm_ws/build/tm_rail:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface'}, 'shell': False}
+[1.282618] (tm_rail_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.304963] (-) TimerEvent: {}
+[1.308222] (tm_rail_interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.309048] (tm_rail_interface) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.310475] (tm_rail_interface) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.319751] (tm_rail_interface) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.404867] (-) TimerEvent: {}
+[1.505698] (-) TimerEvent: {}
+[1.606520] (-) TimerEvent: {}
+[1.645010] (tm_rail) StdoutLine: {'line': b'running develop\n'}
+[1.678708] (tm_rail_interface) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.706701] (-) TimerEvent: {}
+[1.807388] (-) TimerEvent: {}
+[1.847395] (tm_rail) StdoutLine: {'line': b'running egg_info\n'}
+[1.847926] (tm_rail) StdoutLine: {'line': b'creating tm_rail.egg-info\n'}
+[1.848112] (tm_rail) StdoutLine: {'line': b'writing tm_rail.egg-info/PKG-INFO\n'}
+[1.848372] (tm_rail) StdoutLine: {'line': b'writing dependency_links to tm_rail.egg-info/dependency_links.txt\n'}
+[1.848629] (tm_rail) StdoutLine: {'line': b'writing entry points to tm_rail.egg-info/entry_points.txt\n'}
+[1.848837] (tm_rail) StdoutLine: {'line': b'writing requirements to tm_rail.egg-info/requires.txt\n'}
+[1.848982] (tm_rail) StdoutLine: {'line': b'writing top-level names to tm_rail.egg-info/top_level.txt\n'}
+[1.849150] (tm_rail) StdoutLine: {'line': b"writing manifest file 'tm_rail.egg-info/SOURCES.txt'\n"}
+[1.851852] (tm_rail) StdoutLine: {'line': b"reading manifest file 'tm_rail.egg-info/SOURCES.txt'\n"}
+[1.852805] (tm_rail) StdoutLine: {'line': b"writing manifest file 'tm_rail.egg-info/SOURCES.txt'\n"}
+[1.856171] (tm_rail) StdoutLine: {'line': b'running build_ext\n'}
+[1.857028] (tm_rail) StdoutLine: {'line': b'Creating /home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages/tm-rail.egg-link (link to .)\n'}
+[1.858509] (tm_rail_interface) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.860369] (tm_rail) StdoutLine: {'line': b'Installing rail_node script to /home/ros_dev/workspace/tm_ws/install/tm_rail/lib/tm_rail\n'}
+[1.861004] (tm_rail) StdoutLine: {'line': b'\n'}
+[1.861152] (tm_rail) StdoutLine: {'line': b'Installed /home/ros_dev/workspace/tm_ws/build/tm_rail\n'}
+[1.861575] (tm_rail) StdoutLine: {'line': b'running symlink_data\n'}
+[1.861974] (tm_rail) StdoutLine: {'line': b'creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index\n'}
+[1.862125] (tm_rail) StdoutLine: {'line': b'creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index/resource_index\n'}
+[1.862267] (tm_rail) StdoutLine: {'line': b'creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index/resource_index/packages\n'}
+[1.862679] (tm_rail) StdoutLine: {'line': b'symbolically linking /home/ros_dev/workspace/tm_ws/build/tm_rail/resource/tm_rail -> /home/ros_dev/workspace/tm_ws/install/tm_rail/share/ament_index/resource_index/packages\n'}
+[1.863088] (tm_rail) StdoutLine: {'line': b'symbolically linking /home/ros_dev/workspace/tm_ws/build/tm_rail/package.xml -> /home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail\n'}
+[1.863542] (tm_rail) StdoutLine: {'line': b'creating /home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/launch\n'}
+[1.863743] (tm_rail) StdoutLine: {'line': b'symbolically linking /home/ros_dev/workspace/tm_ws/build/tm_rail/launch/tm_rail_launch.py -> /home/ros_dev/workspace/tm_ws/install/tm_rail/share/tm_rail/launch\n'}
+[1.907597] (-) TimerEvent: {}
+[1.910867] (tm_rail_interface) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.915492] (tm_rail_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.932576] (tm_rail_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.938961] (tm_rail) CommandEnded: {'returncode': 0}
+[1.982927] (tm_rail) JobEnded: {'identifier': 'tm_rail', 'rc': 0}
+[1.997789] (tm_rail_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.007832] (-) TimerEvent: {}
+[2.052596] (tm_rail_interface) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.107997] (-) TimerEvent: {}
+[2.208719] (-) TimerEvent: {}
+[2.309526] (-) TimerEvent: {}
+[2.410280] (-) TimerEvent: {}
+[2.511032] (-) TimerEvent: {}
+[2.576393] (tm_rail_interface) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.611250] (-) TimerEvent: {}
+[2.712050] (-) TimerEvent: {}
+[2.812781] (-) TimerEvent: {}
+[2.913728] (-) TimerEvent: {}
+[2.968188] (tm_rail_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.013910] (-) TimerEvent: {}
+[3.114588] (-) TimerEvent: {}
+[3.215288] (-) TimerEvent: {}
+[3.315939] (-) TimerEvent: {}
+[3.374521] (tm_rail_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.410771] (tm_rail_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.413968] (tm_rail_interface) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.416041] (-) TimerEvent: {}
+[3.460362] (tm_rail_interface) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.460852] (tm_rail_interface) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.460952] (tm_rail_interface) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.461029] (tm_rail_interface) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[3.497098] (tm_rail_interface) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.516338] (-) TimerEvent: {}
+[3.554929] (tm_rail_interface) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.556128] (tm_rail_interface) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.562957] (tm_rail_interface) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.607178] (tm_rail_interface) StdoutLine: {'line': b'-- Generating done\n'}
+[3.616426] (-) TimerEvent: {}
+[3.620781] (tm_rail_interface) StdoutLine: {'line': b'-- Build files have been written to: /home/ros_dev/workspace/tm_ws/build/tm_rail_interface\n'}
+[3.633537] (tm_rail_interface) CommandEnded: {'returncode': 0}
+[3.635192] (tm_rail_interface) JobProgress: {'identifier': 'tm_rail_interface', 'progress': 'build'}
+[3.638002] (tm_rail_interface) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface', '--', '-j18', '-l18'], 'cwd': '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface', 'env': OrderedDict([('HOSTNAME', 'Ian-Laptop'), ('GIT_ASKPASS', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/bin/helpers/browser.sh'), ('HOME', '/home/ros_dev'), ('OLDPWD', '/home/ros_dev/workspace/tm_ws/src'), ('TERM_PROGRAM_VERSION', '1.101.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-a99f132a-6d70-4a1e-8d08-140ae86b19ba.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/ros_dev/workspace/tm_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/bin/remote-cli:/home/ros_dev/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock","/home/ros_dev/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-f3762de39c.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock'), ('AMENT_PREFIX_PATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble'), ('SHELL', '/bin/sh'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface'), ('QT_QPA_PLATFORM', 'xcb'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages:/home/ros_dev/workspace/tm_ws/build/tm_rail:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble')]), 'shell': False}
+[3.715514] (tm_rail_interface) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.716535] (-) TimerEvent: {}
+[3.731843] (tm_rail_interface) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.750800] (tm_rail_interface) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_symlink_tm_rail_interface\n'}
+[3.816751] (-) TimerEvent: {}
+[3.917472] (-) TimerEvent: {}
+[4.018071] (-) TimerEvent: {}
+[4.103245] (tm_rail_interface) StdoutLine: {'line': b'running egg_info\n'}
+[4.104541] (tm_rail_interface) StdoutLine: {'line': b'creating tm_rail_interface.egg-info\n'}
+[4.104930] (tm_rail_interface) StdoutLine: {'line': b'writing tm_rail_interface.egg-info/PKG-INFO\n'}
+[4.105398] (tm_rail_interface) StdoutLine: {'line': b'writing dependency_links to tm_rail_interface.egg-info/dependency_links.txt\n'}
+[4.105964] (tm_rail_interface) StdoutLine: {'line': b'writing top-level names to tm_rail_interface.egg-info/top_level.txt\n'}
+[4.106222] (tm_rail_interface) StdoutLine: {'line': b"writing manifest file 'tm_rail_interface.egg-info/SOURCES.txt'\n"}
+[4.109318] (tm_rail_interface) StdoutLine: {'line': b"reading manifest file 'tm_rail_interface.egg-info/SOURCES.txt'\n"}
+[4.110017] (tm_rail_interface) StdoutLine: {'line': b"writing manifest file 'tm_rail_interface.egg-info/SOURCES.txt'\n"}
+[4.118173] (-) TimerEvent: {}
+[4.163849] (tm_rail_interface) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_tm_rail_interface_egg\n'}
+[4.218423] (-) TimerEvent: {}
+[4.230004] (tm_rail_interface) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/tm_rail_interface__rosidl_generator_c.dir/rosidl_generator_c/tm_rail_interface/srv/detail/rail_control__functions.c.o\x1b[0m\n'}
+[4.241812] (tm_rail_interface) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/tm_rail_interface__rosidl_generator_c.dir/rosidl_generator_c/tm_rail_interface/msg/detail/status__functions.c.o\x1b[0m\n'}
+[4.266980] (tm_rail_interface) StdoutLine: {'line': b'[ 10%] Built target tm_rail_interface__cpp\n'}
+[4.285159] (tm_rail_interface) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.285814] (tm_rail_interface) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.291428] (tm_rail_interface) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.318586] (-) TimerEvent: {}
+[4.359810] (tm_rail_interface) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libtm_rail_interface__rosidl_generator_c.so\x1b[0m\n'}
+[4.418776] (-) TimerEvent: {}
+[4.430654] (tm_rail_interface) StdoutLine: {'line': b'[ 20%] Built target tm_rail_interface__rosidl_generator_c\n'}
+[4.450395] (tm_rail_interface) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[4.456326] (tm_rail_interface) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.459072] (tm_rail_interface) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.518939] (-) TimerEvent: {}
+[4.619608] (-) TimerEvent: {}
+[4.720268] (-) TimerEvent: {}
+[4.734251] (tm_rail_interface) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/tm_rail_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_rail_interface/srv/rail_control__type_support.cpp.o\x1b[0m\n'}
+[4.741233] (tm_rail_interface) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/tm_rail_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/tm_rail_interface/msg/status__type_support.cpp.o\x1b[0m\n'}
+[4.820528] (-) TimerEvent: {}
+[4.921173] (-) TimerEvent: {}
+[4.924052] (tm_rail_interface) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/tm_rail_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_rail_interface/srv/detail/rail_control__type_support.c.o\x1b[0m\n'}
+[4.930472] (tm_rail_interface) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/tm_rail_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/tm_rail_interface/msg/detail/status__type_support.c.o\x1b[0m\n'}
+[4.972268] (tm_rail_interface) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/tm_rail_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_rail_interface/srv/detail/rail_control__type_support.cpp.o\x1b[0m\n'}
+[4.977100] (tm_rail_interface) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/tm_rail_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/tm_rail_interface/msg/detail/status__type_support.cpp.o\x1b[0m\n'}
+[4.991018] (tm_rail_interface) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/tm_rail_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_rail_interface/msg/status__type_support.cpp.o\x1b[0m\n'}
+[4.995383] (tm_rail_interface) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/tm_rail_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/tm_rail_interface/srv/rail_control__type_support.cpp.o\x1b[0m\n'}
+[5.017599] (tm_rail_interface) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking C shared library libtm_rail_interface__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[5.021329] (-) TimerEvent: {}
+[5.080365] (tm_rail_interface) StdoutLine: {'line': b'[ 51%] Built target tm_rail_interface__rosidl_typesupport_introspection_c\n'}
+[5.080942] (tm_rail_interface) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libtm_rail_interface__rosidl_typesupport_c.so\x1b[0m\n'}
+[5.101402] (tm_rail_interface) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/tm_rail_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_rail_interface/msg/detail/status__type_support_c.cpp.o\x1b[0m\n'}
+[5.101970] (tm_rail_interface) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/tm_rail_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/tm_rail_interface/srv/detail/rail_control__type_support_c.cpp.o\x1b[0m\n'}
+[5.121496] (-) TimerEvent: {}
+[5.153095] (tm_rail_interface) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libtm_rail_interface__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[5.166442] (tm_rail_interface) StdoutLine: {'line': b'[ 61%] Built target tm_rail_interface__rosidl_typesupport_c\n'}
+[5.221676] (-) TimerEvent: {}
+[5.234393] (tm_rail_interface) StdoutLine: {'line': b'[ 61%] Built target tm_rail_interface__rosidl_typesupport_cpp\n'}
+[5.280537] (tm_rail_interface) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/tm_rail_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_rail_interface/srv/detail/dds_fastrtps/rail_control__type_support.cpp.o\x1b[0m\n'}
+[5.288494] (tm_rail_interface) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/tm_rail_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/tm_rail_interface/msg/detail/dds_fastrtps/status__type_support.cpp.o\x1b[0m\n'}
+[5.321893] (-) TimerEvent: {}
+[5.422664] (-) TimerEvent: {}
+[5.523280] (-) TimerEvent: {}
+[5.623944] (-) TimerEvent: {}
+[5.724691] (-) TimerEvent: {}
+[5.755078] (tm_rail_interface) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libtm_rail_interface__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[5.824959] (-) TimerEvent: {}
+[5.881900] (tm_rail_interface) StdoutLine: {'line': b'[ 69%] Built target tm_rail_interface__rosidl_typesupport_introspection_cpp\n'}
+[5.925184] (-) TimerEvent: {}
+[5.940724] (tm_rail_interface) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libtm_rail_interface__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[6.025438] (-) TimerEvent: {}
+[6.071278] (tm_rail_interface) StdoutLine: {'line': b'[ 71%] Built target tm_rail_interface__rosidl_typesupport_fastrtps_c\n'}
+[6.080789] (tm_rail_interface) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libtm_rail_interface__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[6.125606] (-) TimerEvent: {}
+[6.206393] (tm_rail_interface) StdoutLine: {'line': b'[ 74%] Built target tm_rail_interface__rosidl_typesupport_fastrtps_cpp\n'}
+[6.225841] (-) TimerEvent: {}
+[6.246403] (tm_rail_interface) StdoutLine: {'line': b'[ 74%] Built target tm_rail_interface\n'}
+[6.292423] (tm_rail_interface) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[6.326025] (-) TimerEvent: {}
+[6.426535] (-) TimerEvent: {}
+[6.527018] (-) TimerEvent: {}
+[6.627593] (-) TimerEvent: {}
+[6.728079] (-) TimerEvent: {}
+[6.828518] (-) TimerEvent: {}
+[6.924658] (tm_rail_interface) StdoutLine: {'line': b'[ 76%] Built target tm_rail_interface__py\n'}
+[6.928616] (-) TimerEvent: {}
+[6.967711] (tm_rail_interface) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/tm_rail_interface__rosidl_generator_py.dir/rosidl_generator_py/tm_rail_interface/msg/_status_s.c.o\x1b[0m\n'}
+[6.968250] (tm_rail_interface) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/tm_rail_interface__rosidl_generator_py.dir/rosidl_generator_py/tm_rail_interface/srv/_rail_control_s.c.o\x1b[0m\n'}
+[7.028807] (-) TimerEvent: {}
+[7.124075] (tm_rail_interface) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/tm_rail_interface/libtm_rail_interface__rosidl_generator_py.so\x1b[0m\n'}
+[7.128893] (-) TimerEvent: {}
+[7.196232] (tm_rail_interface) StdoutLine: {'line': b'[ 84%] Built target tm_rail_interface__rosidl_generator_py\n'}
+[7.229097] (-) TimerEvent: {}
+[7.232952] (tm_rail_interface) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/tm_rail_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/tm_rail_interface/_tm_rail_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[7.233480] (tm_rail_interface) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/tm_rail_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/tm_rail_interface/_tm_rail_interface_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[7.233614] (tm_rail_interface) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/tm_rail_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/tm_rail_interface/_tm_rail_interface_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[7.329281] (-) TimerEvent: {}
+[7.370109] (tm_rail_interface) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/tm_rail_interface/tm_rail_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.370706] (tm_rail_interface) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/tm_rail_interface/tm_rail_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.374697] (tm_rail_interface) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/tm_rail_interface/tm_rail_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.429490] (-) TimerEvent: {}
+[7.433760] (tm_rail_interface) StdoutLine: {'line': b'[100%] Built target tm_rail_interface__rosidl_typesupport_c__pyext\n'}
+[7.435377] (tm_rail_interface) StdoutLine: {'line': b'[100%] Built target tm_rail_interface__rosidl_typesupport_introspection_c__pyext\n'}
+[7.445707] (tm_rail_interface) StdoutLine: {'line': b'[100%] Built target tm_rail_interface__rosidl_typesupport_fastrtps_c__pyext\n'}
+[7.476242] (tm_rail_interface) CommandEnded: {'returncode': 0}
+[7.478361] (tm_rail_interface) JobProgress: {'identifier': 'tm_rail_interface', 'progress': 'install'}
+[7.495202] (tm_rail_interface) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface'], 'cwd': '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface', 'env': OrderedDict([('HOSTNAME', 'Ian-Laptop'), ('GIT_ASKPASS', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/bin/helpers/browser.sh'), ('HOME', '/home/ros_dev'), ('OLDPWD', '/home/ros_dev/workspace/tm_ws/src'), ('TERM_PROGRAM_VERSION', '1.101.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-a99f132a-6d70-4a1e-8d08-140ae86b19ba.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/ros_dev/workspace/tm_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/home/ros_dev/.vscode-server/bin/2901c5ac6db8a986a5666c3af51ff804d05af0d4/bin/remote-cli:/home/ros_dev/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock","/home/ros_dev/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/tmp/.docker.xauth'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-f3762de39c.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-343f3be3-fa7a-4675-8dfd-c816ddc20436.sock'), ('AMENT_PREFIX_PATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble'), ('SHELL', '/bin/sh'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ros_dev/workspace/tm_ws/build/tm_rail_interface'), ('QT_QPA_PLATFORM', 'xcb'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages:/home/ros_dev/workspace/tm_ws/build/tm_rail:/home/ros_dev/workspace/tm_ws/install/tm_rail/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface:/home/ros_dev/workspace/tm_ws/install/tm_rail:/opt/ros/humble')]), 'shell': False}
+[7.513027] (tm_rail_interface) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.513850] (tm_rail_interface) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[7.514483] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/ament_index/resource_index/rosidl_interfaces/tm_rail_interface\n'}
+[7.529676] (-) TimerEvent: {}
+[7.533966] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__functions.h\n'}
+[7.551272] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__struct.h\n'}
+[7.566247] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__type_support.h\n'}
+[7.580730] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/rosidl_generator_c__visibility_control.h\n'}
+[7.597932] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/status.h\n'}
+[7.613781] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__functions.h\n'}
+[7.627713] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__struct.h\n'}
+[7.629801] (-) TimerEvent: {}
+[7.641838] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__type_support.h\n'}
+[7.661890] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/rail_control.h\n'}
+[7.678645] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/environment/library_path.sh\n'}
+[7.695264] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/environment/library_path.dsv\n'}
+[7.712783] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__rosidl_typesupport_fastrtps_c.h\n'}
+[7.730029] (-) TimerEvent: {}
+[7.737172] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[7.759507] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__rosidl_typesupport_fastrtps_c.h\n'}
+[7.776467] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__rosidl_typesupport_introspection_c.h\n'}
+[7.794541] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[7.811892] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__rosidl_typesupport_introspection_c.h\n'}
+[7.830255] (-) TimerEvent: {}
+[7.830926] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__builder.hpp\n'}
+[7.855730] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__struct.hpp\n'}
+[7.871708] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__traits.hpp\n'}
+[7.886796] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__type_support.hpp\n'}
+[7.902411] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[7.918468] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/status.hpp\n'}
+[7.930458] (-) TimerEvent: {}
+[7.938687] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__builder.hpp\n'}
+[7.957817] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__struct.hpp\n'}
+[7.975192] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__traits.hpp\n'}
+[7.991280] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__type_support.hpp\n'}
+[8.006877] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/rail_control.hpp\n'}
+[8.022904] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[8.030558] (-) TimerEvent: {}
+[8.037397] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[8.058932] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[8.079874] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[8.097792] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/include/tm_rail_interface/tm_rail_interface/srv/detail/rail_control__rosidl_typesupport_introspection_cpp.hpp\n'}
+[8.112911] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/environment/pythonpath.sh\n'}
+[8.130734] (-) TimerEvent: {}
+[8.131197] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/environment/pythonpath.dsv\n'}
+[8.150424] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[8.165519] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[8.180980] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[8.198097] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[8.215453] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/__init__.py\n'}
+[8.230874] (-) TimerEvent: {}
+[8.231324] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/_tm_rail_interface_s.ep.rosidl_typesupport_c.c\n'}
+[8.246259] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/_tm_rail_interface_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[8.261424] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/_tm_rail_interface_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[8.276778] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/libtm_rail_interface__rosidl_generator_py.so\n'}
+[8.291401] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/msg/__init__.py\n'}
+[8.312352] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/msg/_status.py\n'}
+[8.326933] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/msg/_status_s.c\n'}
+[8.330972] (-) TimerEvent: {}
+[8.341209] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/srv/__init__.py\n'}
+[8.363562] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/srv/_rail_control.py\n'}
+[8.380039] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/srv/_rail_control_s.c\n'}
+[8.395907] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/tm_rail_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.413960] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/tm_rail_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.431533] (-) TimerEvent: {}
+[8.432010] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/tm_rail_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.449437] (tm_rail_interface) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/tm_rail_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.450045] (tm_rail_interface) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/tm_rail_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.450794] (tm_rail_interface) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/tm_rail_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[8.451976] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/srv/RailControl.idl\n'}
+[8.476863] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/msg/Status.idl\n'}
+[8.502510] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/srv/RailControl.srv\n'}
+[8.520750] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/srv/RailControl_Request.msg\n'}
+[8.531736] (-) TimerEvent: {}
+[8.544653] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/srv/RailControl_Response.msg\n'}
+[8.566929] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/msg/Status.msg\n'}
+[8.584336] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/ament_index/resource_index/package_run_dependencies/tm_rail_interface\n'}
+[8.606112] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/ament_index/resource_index/parent_prefix_path/tm_rail_interface\n'}
+[8.621911] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/environment/ament_prefix_path.sh\n'}
+[8.631974] (-) TimerEvent: {}
+[8.639755] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/environment/ament_prefix_path.dsv\n'}
+[8.657951] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/environment/path.sh\n'}
+[8.676654] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/environment/path.dsv\n'}
+[8.692314] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/local_setup.bash\n'}
+[8.708159] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/local_setup.sh\n'}
+[8.723430] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/local_setup.zsh\n'}
+[8.732177] (-) TimerEvent: {}
+[8.739421] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/local_setup.dsv\n'}
+[8.755764] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.dsv\n'}
+[8.772883] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/ament_index/resource_index/packages/tm_rail_interface\n'}
+[8.788572] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/rosidl_cmake-extras.cmake\n'}
+[8.805016] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[8.819863] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[8.832313] (-) TimerEvent: {}
+[8.837075] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[8.853642] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[8.871489] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[8.891668] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[8.907357] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/tm_rail_interfaceConfig.cmake\n'}
+[8.921068] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/tm_rail_interfaceConfig-version.cmake\n'}
+[8.932431] (-) TimerEvent: {}
+[8.933771] (tm_rail_interface) StdoutLine: {'line': b'-- Symlinking: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/package.xml\n'}
+[8.948653] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_generator_c.so\n'}
+[8.949087] (tm_rail_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_generator_c.so" to ""\n'}
+[8.950004] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_fastrtps_c.so\n'}
+[8.950454] (tm_rail_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[8.950686] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_introspection_c.so\n'}
+[8.950838] (tm_rail_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_introspection_c.so" to ""\n'}
+[8.950999] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_c.so\n'}
+[8.951219] (tm_rail_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_c.so" to ""\n'}
+[8.951375] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_fastrtps_cpp.so\n'}
+[8.951578] (tm_rail_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[8.951763] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_introspection_cpp.so\n'}
+[8.952092] (tm_rail_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[8.952325] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_cpp.so\n'}
+[8.952581] (tm_rail_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_typesupport_cpp.so" to ""\n'}
+[9.009565] (tm_rail_interface) StdoutLine: {'line': b"Listing '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface'...\n"}
+[9.009867] (tm_rail_interface) StdoutLine: {'line': b"Compiling '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/__init__.py'...\n"}
+[9.009954] (tm_rail_interface) StdoutLine: {'line': b"Listing '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/msg'...\n"}
+[9.010025] (tm_rail_interface) StdoutLine: {'line': b"Compiling '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/msg/__init__.py'...\n"}
+[9.010092] (tm_rail_interface) StdoutLine: {'line': b"Compiling '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/msg/_status.py'...\n"}
+[9.010193] (tm_rail_interface) StdoutLine: {'line': b"Listing '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/srv'...\n"}
+[9.010283] (tm_rail_interface) StdoutLine: {'line': b"Compiling '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/srv/__init__.py'...\n"}
+[9.010355] (tm_rail_interface) StdoutLine: {'line': b"Compiling '/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/local/lib/python3.10/dist-packages/tm_rail_interface/srv/_rail_control.py'...\n"}
+[9.016940] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_generator_py.so\n'}
+[9.017584] (tm_rail_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/ros_dev/workspace/tm_ws/install/tm_rail_interface/lib/libtm_rail_interface__rosidl_generator_py.so" to ""\n'}
+[9.018144] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/export_tm_rail_interface__rosidl_generator_cExport.cmake\n'}
+[9.018663] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/export_tm_rail_interface__rosidl_generator_cExport-noconfig.cmake\n'}
+[9.018980] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/export_tm_rail_interface__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[9.019231] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/export_tm_rail_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[9.019410] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/tm_rail_interface__rosidl_typesupport_introspection_cExport.cmake\n'}
+[9.019832] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/tm_rail_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[9.020049] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/tm_rail_interface__rosidl_typesupport_cExport.cmake\n'}
+[9.020339] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/tm_rail_interface__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[9.020501] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/export_tm_rail_interface__rosidl_generator_cppExport.cmake\n'}
+[9.020650] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/export_tm_rail_interface__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[9.021089] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/export_tm_rail_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[9.021437] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/tm_rail_interface__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[9.021607] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/tm_rail_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[9.021756] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/tm_rail_interface__rosidl_typesupport_cppExport.cmake\n'}
+[9.021900] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/tm_rail_interface__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[9.022066] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/export_tm_rail_interface__rosidl_generator_pyExport.cmake\n'}
+[9.022234] (tm_rail_interface) StdoutLine: {'line': b'-- Installing: /home/ros_dev/workspace/tm_ws/install/tm_rail_interface/share/tm_rail_interface/cmake/export_tm_rail_interface__rosidl_generator_pyExport-noconfig.cmake\n'}
+[9.026136] (tm_rail_interface) CommandEnded: {'returncode': 0}
+[9.032588] (-) TimerEvent: {}
+[9.055028] (tm_rail_interface) JobEnded: {'identifier': 'tm_rail_interface', 'rc': 0}
+[9.057223] (-) EventReactorShutdown: {}
