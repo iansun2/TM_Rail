@@ -7,6 +7,56 @@ from .tm_rail_communication import SerialPacketController
 import yaml
 import traceback
 import time
+import threading
+from functools import partial
+
+class MultiRunner:
+    def __init__(self, count: int):
+        self._count = count
+        self._mutex = threading.Lock()
+        self._finish = [True] * count
+        self._task_queue = [[]] * count
+        print(self._task_queue)
+        self._threads: list[threading.Thread] = []
+        for id in range(count):
+            print(f"start: {id}")
+            self._threads.append(threading.Thread(target=self._handle, daemon=True, args=[id ,]))
+            self._threads[-1].start()
+    
+    def _handle(self, id):
+        while True:
+            self._mutex.acquire()
+            task_queue = self._task_queue[id] 
+            self._mutex.release()
+            for task in task_queue:
+                print(f"id: {id}, task: {task}")
+                task()
+            self._mutex.acquire()
+            self._task_queue[id] = []
+            self._finish[id] = True
+            self._mutex.release()
+            time.sleep(0.1)
+    
+    def run(self, task_queue: list[list[callable]]):
+        self._mutex.acquire()
+        self._task_queue = task_queue
+        self._finish = [False] * self._count
+        self._mutex.release()
+        self.wait_finish()
+    
+    def wait_finish(self):
+        while True:
+            ok = True
+            self._mutex.acquire()
+            for finish in self._finish:
+                if finish == False:
+                    ok = False
+                    break
+            self._mutex.release()
+            if ok:
+                break
+            time.sleep(0.1)
+
 
 class TMRailNode(Node):
     def __init__(self, rail_name: str, baud_rate: int, config: dict, main_rail: bool = False):
@@ -22,54 +72,59 @@ class TMRailNode(Node):
             self.get_logger().error(f"Failed to connect: {e}")
             rclpy.shutdown()
             return
-        self.controller.set_status_callback(self.status_callback)
+        # self.controller.set_status_callback(self.status_callback)
         # config
         self.config = config
         ## create service when main_rail
         if main_rail:
             self.get_logger().info(f"Create service")
             self.server = self.create_service(RailControl, 'rail_control', self.rail_control_callback)
+            self.multi_runner = MultiRunner(2)
         ## Publishers
-        self.status_pub = self.create_publisher(Status, '/' + rail_name + '/status', 2)
+        # self.status_pub = self.create_publisher(Status, '/' + rail_name + '/status', 2)
         self.rail_nodes:  dict[str, TMRailNode] = {}
 
     def transfer_to_main_rail(self, arm_rail_node: 'TMRailNode'):
         '''
         `Require initial state` main and arm not at docking position\n
-        `Exit state` main -> home, arm -> docking position + dock move
+        `Exit state` docking position + dock move
         '''
         arm_rail_cfg = arm_rail_node.config
         main_rail_moving_vel = self.config["moving_vel"]
         arm_rail_moving_vel = arm_rail_cfg["moving_vel"]
         arm_rail_dock_cfg = arm_rail_cfg["dock"]
         ## docking pos
-        self.controller.goto(arm_rail_cfg["m_docking_pos"], main_rail_moving_vel)
-        arm_rail_node.controller.goto(arm_rail_cfg["a_docking_pos"], arm_rail_moving_vel)
+        self.multi_runner.run([
+            [partial(self.controller.goto, 
+                     arm_rail_cfg["m_docking_pos"], main_rail_moving_vel)],
+            [partial(arm_rail_node.controller.goto, 
+                     arm_rail_cfg["a_docking_pos"] + arm_rail_dock_cfg["a_move"], arm_rail_moving_vel)]
+        ])
         ## transfer bag carrier to main rail (dock)
-        self.controller.move(arm_rail_dock_cfg["m_move"], 10)
-        arm_rail_node.controller.move(arm_rail_dock_cfg["a_move"], 10)
-        ## zero main rail
-        self.controller.goto(10, main_rail_moving_vel)
-        self.controller.home()
+        arm_rail_node.controller.move(-arm_rail_dock_cfg["a_move"], 300),
+        self.controller.move(arm_rail_dock_cfg["m_move"], 50),
+        arm_rail_node.controller.move(arm_rail_dock_cfg["a_move"], 50)
 
     def transfer_to_arm_rail(self, arm_rail_node: 'TMRailNode'):
         '''
         `Require initial state` main and arm not at docking position\n
-        `Exit state` main -> docking position + dock move, arm -> home
+        `Exit state` docking position + dock move
         '''
         arm_rail_cfg = arm_rail_node.config
         main_rail_moving_vel = self.config["moving_vel"]
         arm_rail_moving_vel = arm_rail_cfg["moving_vel"]
         arm_rail_undock_cfg = arm_rail_cfg["undock"]
         ## docking pos
-        self.controller.goto(arm_rail_cfg["m_docking_pos"], main_rail_moving_vel)
-        arm_rail_node.controller.goto(arm_rail_cfg["a_docking_pos"], arm_rail_moving_vel)
+        self.multi_runner.run([
+            [partial(self.controller.goto,
+                     arm_rail_cfg["m_docking_pos"], main_rail_moving_vel)],
+            [partial(arm_rail_node.controller.goto,
+                     arm_rail_cfg["a_docking_pos"] + arm_rail_undock_cfg["a_move"], arm_rail_moving_vel)]
+        ])
         ## transfer bag carrier to arm rail (undock)
-        arm_rail_node.controller.move(arm_rail_undock_cfg["a_move"], 10)
-        self.controller.move(arm_rail_undock_cfg["m_move"], 10)
-        ## zero arm rail
-        arm_rail_node.controller.goto(10, arm_rail_moving_vel)
-        arm_rail_node.controller.home()
+        arm_rail_node.controller.move(-arm_rail_undock_cfg["a_move"], 50)
+        arm_rail_node.controller.move(arm_rail_undock_cfg["a_move"], 50)
+        self.controller.move(arm_rail_undock_cfg["m_move"], 50)
 
     def rail_control_callback(self, request: RailControl.Request, response: RailControl.Response):
         ## read arm rail config
@@ -98,33 +153,46 @@ class TMRailNode(Node):
         try:
             if opt == OPT_INIT:
                 self.get_logger().info(f"init rail: {rail_name}")
-                self.controller.home()
-                arm_rail_node.controller.home()
+                self.multi_runner.run([
+                    [self.controller.home],
+                    [arm_rail_node.controller.home]
+                ])
                 response.result = 0
             elif opt == OPT_CALL_RAIL:
                 self.get_logger().info(f"call rail: {rail_name}")
                 self.transfer_to_main_rail(arm_rail_node)
+                ## zero main rail
+                self.controller.goto(10, main_rail_moving_vel)
+                self.controller.home()
                 # arm_rail_node.controller.goto(arm_rail_standby_pos, arm_rail_moving_vel)
                 self.controller.move(main_rail_bag_pos, main_rail_moving_vel)
                 ## wait user put bag
-                # self.controller.auto_bag(main_rail_bag_release_deg, main_rail_bag_lock_deg)
+                self.controller.auto_bag(main_rail_bag_release_deg, main_rail_bag_lock_deg)
                 ## go to funnel
                 self.transfer_to_arm_rail(arm_rail_node)
-                arm_rail_node.controller.goto(arm_rail_config["funnel_pos"], arm_rail_moving_vel)
-                self.controller.goto(main_rail_standby_pos, main_rail_moving_vel)
+                ## zero arm rail
+                self.multi_runner.run([
+                    [partial(arm_rail_node.controller.goto, 
+                             10, arm_rail_moving_vel),
+                     arm_rail_node.controller.home,
+                     partial(arm_rail_node.controller.goto, 
+                             arm_rail_config["funnel_pos"], arm_rail_moving_vel)],
+                    [partial(self.controller.goto, 
+                             main_rail_standby_pos, main_rail_moving_vel)]
+                ])
                 response.result = 0
             elif opt == OPT_RETURN_BAG:
                 self.get_logger().info(f"return bag: {rail_name}")
                 self.transfer_to_main_rail(arm_rail_node)
-                arm_rail_node.controller.goto(arm_rail_standby_pos, arm_rail_moving_vel)
-                self.controller.move(main_rail_bag_pos, main_rail_moving_vel)
+                # arm_rail_node.controller.goto(arm_rail_standby_pos, arm_rail_moving_vel)
+                self.controller.goto(main_rail_bag_pos, main_rail_moving_vel)
                 ## drap the bag
                 self.controller.bag(main_rail_bag_release_deg)
                 time.sleep(1)
                 self.controller.bag(main_rail_bag_lock_deg)
                 ## carrier back to arm rail
                 self.transfer_to_arm_rail(arm_rail_node)
-                arm_rail_node.controller.goto(arm_rail_standby_pos, arm_rail_moving_vel)
+                # arm_rail_node.controller.goto(arm_rail_standby_pos, arm_rail_moving_vel)
                 self.controller.goto(main_rail_standby_pos, main_rail_moving_vel)
                 response.result = 0
             else:
@@ -135,17 +203,17 @@ class TMRailNode(Node):
             response.result = -2
         return response
 
-    def status_callback(self):
-        status = self.controller.status()
-        if status is not None:
-            position, velocity, homed, busy, bag_detected = status
-            status_msg = Status()
-            status_msg.position = float(position)
-            status_msg.velocity = float(velocity)
-            status_msg.homed = bool(homed)
-            status_msg.busy = bool(busy)
-            status_msg.bag_detected = bool(bag_detected)
-            self.status_pub.publish(status_msg)
+    # def status_callback(self):
+    #     status = self.controller.status()
+    #     if status is not None:
+    #         position, velocity, homed, busy, bag_detected = status
+    #         status_msg = Status()
+    #         status_msg.position = float(position)
+    #         status_msg.velocity = float(velocity)
+    #         status_msg.homed = bool(homed)
+    #         status_msg.busy = bool(busy)
+    #         status_msg.bag_detected = bool(bag_detected)
+    #         self.status_pub.publish(status_msg)
 
 
 class Entry(Node):

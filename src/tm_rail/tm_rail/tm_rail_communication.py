@@ -198,7 +198,8 @@ class SerialPacketController:
         :param timeout: seconds
         :return: True when not busy; False when timeout
         '''
-        time.sleep(0.2)
+        # print("start wait not busy")
+        time.sleep(0.5)
         self._status_mutex.acquire()
         self._new_status_pack = False
         self._status_mutex.release()
@@ -208,8 +209,10 @@ class SerialPacketController:
                 packet = self._get_status()
                 # print(f"busy: {self._status_packets[3]}")
                 if packet and not packet[3]:
+                    # print("end wait not busy")
                     return True
             time.sleep(0.1)
+        # print("fail wait not busy")
         return False
 
     def goto(self, position: float, velocity: float) -> bool:

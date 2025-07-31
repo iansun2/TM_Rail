@@ -13,10 +13,10 @@ rails:
     funnel_pos:     0
     standby_pos:    30
     m_docking_pos:  1792
-    a_docking_pos:  753
+    a_docking_pos:  756
     dock:      # bag give to main rail
       m_move:       -30
-      a_move:       -30
+      a_move:       -100
     undock:    # bag give to sub rail
       m_move:       0
-      a_move:       -30
+      a_move:       -40
