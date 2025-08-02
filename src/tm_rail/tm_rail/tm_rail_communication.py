@@ -18,53 +18,58 @@ TYPE_BAG = 3
 TYPE_STATUS = 4
 TYPE_NAME = 5
 
-class SerialPacketController:
-    def __init__(self, target: str, baudrate: int):
-        self._ser = None
-        ## get serial port
-        serial_ok = False
-        ports = serial.tools.list_ports.comports()
-        available_ports = []
-        for port, desc, hwid in sorted(ports):
-            ## get ttyACM or ttyUSB
-            # print(port)
-            c = port[8]
-            # print(c)
-            if c == 'A' or c == 'U':
-                available_ports.append(port)
-        # available_ports = ['/dev/ttyUSB0', '/dev/ttyACM0']
-        print(f"available ports: {available_ports}")
-        ## try port
-        for port in available_ports:
-            try:
-                print(f"Connecting to {port}")
-                self._ser = serial.Serial(port, baudrate, timeout=2)
-                received_name = False
-                start_time = time.time()
-                while(time.time() - start_time < 3):
-                    self._ser.read_until(PACKET_IDENTIFY)
-                    raw_data = self._ser.read(PAYLOAD_SIZE)
-                    p_type, device_name, received_crc = struct.unpack('<h10sL', raw_data)
-                    if p_type == TYPE_NAME:
-                        device_name = device_name.decode('ascii').strip('\x00')
-                        print(f"Device name: {device_name}")
-                        received_name = True
-                        break
-                # device_name = self._ser.readline().replace("\r\n", "")
-                ## name match
-                if received_name and device_name == target:
-                    serial_ok = True
-                    print("Serial open success")
+
+def get_serial_device(baudrate: int):
+    ser = None
+    ## get serial port
+    ports = serial.tools.list_ports.comports()
+    available_ports = []
+    for port, desc, hwid in sorted(ports):
+        ## get ttyACM or ttyUSB
+        # print(port)
+        c = port[8]
+        # print(c)
+        if c == 'A' or c == 'U':
+            available_ports.append(port)
+    # available_ports = ['/dev/ttyUSB0', '/dev/ttyACM0']
+    print(f"available ports: {available_ports}")
+    ## data
+    device_dict = {}
+    ## try port
+    for port in available_ports:
+        try:
+            print(f"Connecting to {port}")
+            ser = serial.Serial(port, baudrate, timeout=2)
+            received_name = False
+            start_time = time.time()
+            while(time.time() - start_time < 3):
+                ser.read_until(PACKET_IDENTIFY)
+                raw_data = ser.read(PAYLOAD_SIZE)
+                p_type, device_name, received_crc = struct.unpack('<h10sL', raw_data)
+                if p_type == TYPE_NAME:
+                    device_name = device_name.decode('ascii').strip('\x00')
+                    print(f"Device name: {device_name}")
+                    received_name = True
                     break
-                else:
-                    print("Not this port")
-                    self._ser.close()
-            except Exception as e:
-                # print(f"Serail Exception: {e}")
-                continue
-        # exit()
+            ## name match
+            if received_name:
+                print("Serial open success")
+                device_dict[device_name] = port
+            else:
+                print("Not this port")
+            ## close port
+            ser.close()
+        except Exception as e:
+            print(f"Serail Exception: {e}")
+            continue
+    return device_dict
+
+
+class SerialPacketController:
+    def __init__(self, port: str, baudrate: int):
+        self._ser = serial.Serial(port, baudrate)
         ## exit when serial not opened
-        if not serial_ok:
+        if not self._ser.is_open:
             raise Exception("Serial port not opened")
         print(f"Serial open success: {self._ser.name}")
         self._crc32_func = crcmod.predefined.mkCrcFun('crc-32')

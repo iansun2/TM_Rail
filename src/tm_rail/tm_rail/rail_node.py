@@ -3,7 +3,7 @@ from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from tm_rail_interface.srv import RailControl
 from tm_rail_interface.msg import Status
-from .tm_rail_communication import SerialPacketController
+from .tm_rail_communication import SerialPacketController, get_serial_device
 import yaml
 import traceback
 import time
@@ -16,10 +16,10 @@ class MultiRunner:
         self._mutex = threading.Lock()
         self._finish = [True] * count
         self._task_queue = [[]] * count
-        print(self._task_queue)
+        # print(self._task_queue)
         self._threads: list[threading.Thread] = []
         for id in range(count):
-            print(f"start: {id}")
+            # print(f"start: {id}")
             self._threads.append(threading.Thread(target=self._handle, daemon=True, args=[id ,]))
             self._threads[-1].start()
     
@@ -59,13 +59,13 @@ class MultiRunner:
 
 
 class TMRailNode(Node):
-    def __init__(self, rail_name: str, baud_rate: int, config: dict, main_rail: bool = False):
+    def __init__(self, rail_name: str, port: str,  baud_rate: int, config: dict, main_rail: bool = False):
         super().__init__(rail_name)
         self.get_logger().info(f"{rail_name} init")
         ## init communication
         self.get_logger().info(f"{rail_name} baud rate: {baud_rate}")
         try:
-            self.controller = SerialPacketController(rail_name, baud_rate)
+            self.controller = SerialPacketController(port, baud_rate)
             self.controller.start_receiving()
             self.get_logger().info(f"Successfully connected")
         except Exception as e:
@@ -192,8 +192,14 @@ class TMRailNode(Node):
                 self.controller.bag(main_rail_bag_lock_deg)
                 ## carrier back to arm rail
                 self.transfer_to_arm_rail(arm_rail_node)
-                # arm_rail_node.controller.goto(arm_rail_standby_pos, arm_rail_moving_vel)
-                self.controller.goto(main_rail_standby_pos, main_rail_moving_vel)
+                self.multi_runner.run([
+                    [partial(self.controller.goto, 
+                             main_rail_standby_pos, main_rail_moving_vel)],
+                    [partial(arm_rail_node.controller.goto, 
+                             arm_rail_standby_pos, arm_rail_moving_vel),
+                     arm_rail_node.controller.home]
+                ])
+                
                 response.result = 0
             else:
                 self.get_logger().error("unknown opt")
@@ -232,11 +238,16 @@ class Entry(Node):
         main_rail_name = self.config["main_rail"]
         baud_rate = self.config["baud_rate"]
         rails = self.config["rails"]
+        ## get device port
+        devices_port = get_serial_device(baud_rate)
+        print(f"devices port: {devices_port}")
         # print(rails)
         ## create rail nodes
         for rail_name, rail_config in rails.items():
             self.get_logger().info(f"start {rail_name}")
-            node = TMRailNode(rail_name, baud_rate, rail_config, rail_name == main_rail_name)
+            if devices_port.get(rail_name) is None:
+                raise Exception("device port not exist")
+            node = TMRailNode(rail_name, devices_port[rail_name], baud_rate, rail_config, rail_name == main_rail_name)
             rail_nodes[rail_name] = node
             if not rclpy.ok():
                 raise Exception("rclpy not ok")
