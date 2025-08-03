@@ -26,6 +26,7 @@ setup(
     entry_points={
         'console_scripts': [
             'rail_node=tm_rail.rail_node:main'
+            'tm_mark=tm_rail.tm_mark:main'
         ],
     },
 )
